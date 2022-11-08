@@ -69,7 +69,7 @@ In order for webfinger to work, it must be mapped to the root directory of the U
 
 Add the following to the .htaccess file in the root directory:
 
-	RedirectMatch "^\/\.well-known(.*)$" "\/blog\/\.well-known$1"
+	Redirect 301 "^.well-known/webfinger" "/blog/activitypub/1.0/webfinger"
 
 Where 'blog' is the path to the subdirectory at which your blog resides.
 
